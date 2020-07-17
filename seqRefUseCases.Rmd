@@ -26,8 +26,8 @@ set.seed(42)
 ```{r, eval=T, echo=FALSE}
 pg <- dbDriver('PostgreSQL')
 conn<- dbConnect(pg, user='postgres',
-                 password='letmein',
-                 host="193.62.52.180",
+                 password='',
+                 host="193.62.52.XXX",
                  port=5432, 
                  dbname='SEQREF_DB')
 # Get data from DB
