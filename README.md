@@ -1,7 +1,7 @@
 # sequence-literature
 This repository will host a set of tidyverse code for Exploratory Analysis and Predictive Modelling of sequences citation in the literature. Sequences originate from the **European Nucleotide Archive** (ENA). The literatures originate from the **EuropePMC** 
 
-#### Data Acquisition Workflow
+#### Data Extraction Workflow
 
 ![alt text](preprocessing/WILDSIdataworkflow.png)
 
