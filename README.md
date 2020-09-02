@@ -3,7 +3,7 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 
 #### Data Acquisition Workflow
 
-![alt text](processing/WILDSIdataworkflow.png)
+![alt text](preprocessing/WILDSIdataworkflow.png)
 
 **1. Code repository:**
 
