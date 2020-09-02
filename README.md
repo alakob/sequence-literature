@@ -88,9 +88,9 @@ Sequence entry must have the **/country** qualifier that represent, the locality
 
 **3.1 Query terms**
 
-1. Sequence accession e.g.:AB013190
-2. Primary pubmed id e.g.: 11050544
-3. Project accession e.g.: PRJDB3373
+- **Sequence accession** e.g.:AB013190
+- **Primary pubmed id** e.g.: 11050544
+- **Project accession** e.g.: PRJDB3373
 
 **3.2 ePMC API:**
 
