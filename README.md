@@ -43,7 +43,8 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 
 **2.3 Extraction condition:**
 
-Sequence entry must have the **/country** qualifier that represent, the locality of isolation of the sequenced organism indicated in terms of political names for nations, oceans or seas, followed by regions and localities
+- Sequence entry must have the **/country** qualifier that represent, the locality of isolation of the sequenced organism indicated in terms of political names for nations, oceans or seas, followed by regions and localities
+- Sequence entry must be a **non-WGS** sequence
 
 **2.4 ENA extracted Target**
 
