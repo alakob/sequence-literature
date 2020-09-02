@@ -80,9 +80,6 @@ Sequence entry must have the **/country** qualifier that represent, the locality
 | SYN | 737 |
 | UNC | 246 |
 | TGN | 57 |
-|
- |
- |
 | Total | 18034192 |
 
 **3. Data source ePMC**
