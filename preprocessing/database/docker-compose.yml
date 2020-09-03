@@ -1,0 +1,43 @@
+version: '3.5'
+
+services:
+
+  postgres:
+    container_name: postgres_container
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-letmein}
+      POSTGRES_DB: "seqref_db"
+      SCHEMA: public
+    volumes:
+       - ./initdb:/docker-entrypoint-initdb.d
+       - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5400:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'seqref@ebi.ac.uk'
+      PGADMIN_DEFAULT_PASSWORD: 'seqref'
+    volumes:
+       - ./pgadmin:/var/lib/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+networks:
+  postgres:
+
+volumes:
+    pgdata:
+    pgadmin:

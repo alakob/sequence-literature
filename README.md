@@ -1,26 +1,33 @@
 # sequence-literature
 This repository will host a set of tidyverse code for Exploratory Analysis and Predictive Modelling of sequences citation in the literature. Sequences originate from the **European Nucleotide Archive** (ENA). The literatures originate from the **EuropePMC** 
 
-#### Data Extraction Workflow
+## Data Extraction Workflow
 
-![alt text](preprocessing/WILDSIdataworkflow.png)
+![alt text](preprocessing/fig/WILDSIdataworkflow.png)
 
-**1. Code repository:**
+## Code repository
 
 [https://github.com/alakob/sequence-literature](https://github.com/alakob/sequence-literature)
 
-1. Code to parse EMBL-flatfiles (embl\_flat\_file\_parser.pl)
-2. Code to query ePMC API (query\_epmc.py)
+- Code to parse EMBL-flatfiles (embl\_flat\_file\_parser.pl)
+- Code to query ePMC API (query\_epmc.py)
 
-**2. Data source ENA:**
+## Sequence-Literature DB
 
-**2.1 ENA release 143 (**03/04/2020**):**
+- preprocessing/database/initdb/seqref.sql.gz
 
+---
+
+## Data Sources
+
+### ENA Data Source:
+
+- ENA release 143 (**03/04/2020**):
 - ftp://[ftp.ebi.ac.uk/pub/databases/ena/sequence/release/std/](http://ftp.ebi.ac.uk/pub/databases/ena/sequence/release/std/)
 - files total 208G compressed and 3.5T uncompressed.
 - The release contains **263,421,789** sequence entries comprising **408,005,271,872** nucleotides.
 
-**2.2 Breakdown of release by Taxonomy**
+### ENA Release Breakdown by Taxonomy
 
 | Division | entries |
 | --- | --- |
@@ -41,12 +48,12 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 | VRT:Other Vertebrates | 22,064,954 |
 | Total | 263,421,789 |
 
-**2.3 Extraction condition:**
+### ENA Release Extraction Condition
 
 - Sequence entry must have the **/country** qualifier that represent, the locality of isolation of the sequenced organism indicated in terms of political names for nations, oceans or seas, followed by regions and localities
 - Sequence entry must be a **non-WGS** sequence
 
-**2.4 ENA extracted Target**
+### ENA Release Extracted Target
 
 | Id | Description |
 | --- | --- |
@@ -64,7 +71,7 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 | code | sequence taxon |
 | project\_acc | Sequence project accession |
 
-**2.5: ENA Extraction statistics.**
+### ENA Release Extraction Statistics
 
 | Division | Counts |
 | --- | --- |
@@ -85,19 +92,21 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 | TGN | 57 |
 | Total | 18034192 |
 
-**3. Data source ePMC**
+### Literature Data source
 
-**3.1 Query terms**
+- Europe PubMed Central **ePMC**
+
+### ePMC Query terms
 
 - **Sequence accession** e.g.:AB013190
 - **Primary pubmed id** e.g.: 11050544
 - **Project accession** e.g.: PRJDB3373
 
-**3.2 ePMC API:**
+### ePMC API
 
 [https://europepmc.org/RestfulWebService#!/Europe32PMC32Articles32RESTful32API/search](https://europepmc.org/RestfulWebService#!/Europe32PMC32Articles32RESTful32API/search)
 
-**3.3 ePMC extracted Target:**
+### ePMC extracted Target
 
 | Retrieved Field | Description |
 | --- | --- |
@@ -123,7 +132,7 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 | receipt\_date | Publication reception date |
 | revision\_date | Publication revision date |
 
-**3.4 ePMC extraction statistics:**
+### ePMC extraction statistics
 
 | Journal | #accessions | Definition |
 | --- | --- | --- |
@@ -134,3 +143,5 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 | PPR | 70 | Preprints |
 | PAT | 24 | Biological Patents |
 | CTX | 5 | CiteXplore |
+
+---
