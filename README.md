@@ -5,6 +5,10 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 
 ![alt text](preprocessing/fig/WILDSIdataworkflow.png)
 
+## Sequence Search stats
+
+![alt text](preprocessing/fig/ENAStats.png)
+
 ## Code repository
 
 [https://github.com/alakob/sequence-literature](https://github.com/alakob/sequence-literature)
