@@ -7,7 +7,7 @@ This repository will host a set of tidyverse code for Exploratory Analysis and P
 
 ## Sequence Search stats
 
-![alt text](ENAStats.png)
+![alt text](statsena.png)
 
 ## Code repository
 
